@@ -38,6 +38,9 @@ const Arrow = styled.div<ArrowProps>`
   cursor: pointer;
   opacity: 0.7;
   z-index: 2;
+  &:hover {
+    transform: scale(1.1);
+  }
 `;
 
 interface WrapperProps {
@@ -100,6 +103,9 @@ const Button = styled.button`
   color: white;
   font-weight: bold;
   letter-spacing: 2px;
+  &:hover {
+    transform: scale(1.1);
+  }
 `;
 
 // This is the main component which is returned

@@ -10,6 +10,8 @@ import SearchIcon from "@mui/icons-material/Search";
 import Badge from "@mui/material/Badge";
 //Importing shopping cart Icon
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+//Importing the wrapper for icons
+import { Icon } from "./Product";
 
 // This is the top most level container for the navbar
 const Container = styled.div`
@@ -23,6 +25,7 @@ const Wrapper = styled.div`
   justify-content: space-evenly;
   align-items: center;
 `;
+
 // *** Placed inside WRAPPER component *** Wrapping the elements on the left under this div element container and specifying its styling
 const Left = styled.div`
   display: flex;
@@ -52,10 +55,10 @@ const Center = styled.div`
   text-align: center;
 `;
 
-// ***Placed inside the CENTER component ***
-const Logo = styled.h1`
+// ***Placed inside the CENTER component *** Exporting this as I am using this within the footer as well.
+export const Logo = styled.h1`
   font-weight: bold;
-  font-size: 30px;
+  font-size: 35px;
 `;
 // *** Placed inside WRAPPER component ***  Wrapping the elements on the right under this div element container and specifying its styling
 const Right = styled.div`
@@ -77,7 +80,9 @@ const Navbar = () => {
       <Wrapper>
         {/*The left component has the search field within it*/}
         <Left>
+            <Icon>
           <MenuIcon sx={{ color: "#191970", cursor: "pointer" }} />
+          </Icon>
           {/* The search container has the input field and the search icon imported from mui */}
           <SearchContainer>
             <InputField />
@@ -95,9 +100,11 @@ const Navbar = () => {
           <NavbarOptions>Become a Seller</NavbarOptions>
           <NavbarOptions>Sign Up</NavbarOptions>
           <NavbarOptions>Login</NavbarOptions>
+          <Icon>
           <Badge badgeContent={2} sx={{ color: "#191970", cursor: "pointer" }}>
             <ShoppingCartIcon />
           </Badge>
+          </Icon>
         </Right>
       </Wrapper>
     </Container>

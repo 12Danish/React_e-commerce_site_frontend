@@ -45,6 +45,9 @@ const Button = styled.button`
   padding: 10px;
   color: white;
   font-weight: bold;
+  &:hover {
+    transform: scale(1.1);
+  }
 `;
 
 // Defining props for CategoryItem Component
