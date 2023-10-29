@@ -5,7 +5,7 @@ import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 // Importing right arrow image from mui
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 // Importing data in JSON format
-import { sliderInfo } from "../sliderData";
+import { sliderInfo } from "../data";
 
 // This container is the top most level element
 const Container = styled.div`
