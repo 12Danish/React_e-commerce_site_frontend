@@ -2,6 +2,8 @@
 
 //Importing this to use styled components
 import styled from "styled-components";
+//Importing the menu Icon
+import MenuIcon from "@mui/icons-material/Menu";
 // Importing Searh Icon
 import SearchIcon from "@mui/icons-material/Search";
 // Importing badges
@@ -18,7 +20,7 @@ const Container = styled.div`
 const Wrapper = styled.div`
   padding: 10px 20px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
 `;
 // *** Placed inside WRAPPER component *** Wrapping the elements on the left under this div element container and specifying its styling
@@ -26,18 +28,23 @@ const Left = styled.div`
   display: flex;
   align-items: center;
   flex: 1;
+  justify-content: flex-start;
 `;
 
 // ***Placed Inside LEFT component *** Specifying style properties for the search box
 const SearchContainer = styled.div`
-  border: 1px solid #afeeee;
+  border: 2px solid #191970;
   display: flex;
+  flex: 0.8;
+  border-radius: 8px;
   align-items: center;
   padding: 3px;
+  margin-left: 20px;
 `;
 // *** This is placed inside the SEARCH_CONTAINER component*** This specifies the properties of the input field
 const InputField = styled.input`
   border: none;
+  flex: 1;
 `;
 // *** Placed inside WRAPPER component ***  Wrapping the elements in the center under this div element container and specifying its styling
 const Center = styled.div`
@@ -70,22 +77,25 @@ const Navbar = () => {
       <Wrapper>
         {/*The left component has the search field within it*/}
         <Left>
+          <MenuIcon sx={{ color: "#191970", cursor: "pointer" }} />
           {/* The search container has the input field and the search icon imported from mui */}
           <SearchContainer>
             <InputField />
-            <SearchIcon sx={{ color: "gray" }} />
+            <SearchIcon sx={{ color: "gray", cursor: "pointer" }} />
           </SearchContainer>
         </Left>
+
         {/*The center component has the Company Name within it*/}
         <Center>
           <Logo>Company Name </Logo>
         </Center>
+
         {/*The right component has different options within it*/}
         <Right>
           <NavbarOptions>Become a Seller</NavbarOptions>
           <NavbarOptions>Sign Up</NavbarOptions>
           <NavbarOptions>Login</NavbarOptions>
-          <Badge badgeContent={2} sx={{ color: "#afeeee" }}>
+          <Badge badgeContent={2} sx={{ color: "#191970", cursor: "pointer" }}>
             <ShoppingCartIcon />
           </Badge>
         </Right>
