@@ -1,10 +1,13 @@
 import { Send } from "@mui/icons-material";
 import styled from "styled-components";
-import { Header } from "./Categories";
+import { Header } from "./shared_styled_elements";
 // This is the top most level element
 const Container = styled.div`
   height: 60vh;
   width: 100%;
+  @media only screen and (max-width: 480px) {
+    height: 40vh;
+  }
 `;
 // This wraps around all the Information after the header
 const InfoWrapper = styled.div`
@@ -19,6 +22,9 @@ const InfoWrapper = styled.div`
 // Defining style for description
 const Description = styled.div`
   font-size: 20px;
+  @media only screen and (max-width: 480px) {
+    margin-left: 17px;
+  }
 `;
 // This wraps around the input and the send button
 const InputContainer = styled.div`
@@ -29,6 +35,9 @@ const InputContainer = styled.div`
   display: flex;
   justify-content: space-between;
   border: solid 1px black;
+  @media only screen and (max-width: 480px) {
+    width:60%;
+  }
 `;
 // This defines the style for the input field
 const Input = styled.input`
@@ -48,7 +57,7 @@ const Button = styled.button`
 const Newsletter = () => {
   return (
     <Container>
-        {/*Importing header from Categories and using it here  */}
+      {/*Importing header from Categories and using it here  */}
       <Header>NewsLetter</Header>
       {/* This element has all the components of the letterhead besides the header */}
       <InfoWrapper>

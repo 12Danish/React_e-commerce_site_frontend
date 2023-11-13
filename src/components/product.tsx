@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-
+import { Icon } from "./shared_styled_elements";
 // This is the top most container
 const Container = styled.div`
   height: 285px;
@@ -18,6 +18,11 @@ const Container = styled.div`
   &:hover {
     transform: scale(1.1);
   }
+  @media only screen and (max-width: 480px) {
+  height : 50%;
+  width : 100%;
+    
+}
 `;
 //This is the circle behind the image, purely for design purposes
 const Circle = styled.div`
@@ -63,22 +68,7 @@ const IconWrapper = styled.div`
   z-index: 3;
   margin: 10px;
 `;
-// Exporting this as this can be used elsewhere as well
-export const Icon = styled.div`
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  background-color: white;
-  cursor: pointer;
-  transition: all 0.5s ease;
-  &:hover {
-    background-color: #e2eef3;
-    transform: scale(1.1);
-  }
-`;
+
 
 // Defining the props for the product component
 interface ProductProps {

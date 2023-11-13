@@ -11,18 +11,25 @@ import Badge from "@mui/material/Badge";
 //Importing shopping cart Icon
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 //Importing the wrapper for icons
-import { Icon } from "./Product";
-
+import { Icon } from "./shared_styled_elements";
+// importing this from the shared_styled_elements file
+import { Logo } from "./shared_styled_elements";
+// importing this function which will help in determining whether screen size
 // This is the top most level container for the navbar
 const Container = styled.div`
   height: 60px;
   background-color: #f8f8ff;
+
+  @media only screen and (max-width: 480px) {
+    height: auto;
+    overflow: hidden;
+  }
 `;
 // ***Placed inside CONTAINER component *** The wrapper is inside <Component> and provides padding and sets display to flexbox for displaying children elements horizontally
 const Wrapper = styled.div`
   padding: 10px 20px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
 `;
 
@@ -32,6 +39,7 @@ const Left = styled.div`
   align-items: center;
   flex: 1;
   justify-content: flex-start;
+
 `;
 
 // ***Placed Inside LEFT component *** Specifying style properties for the search box
@@ -55,17 +63,15 @@ const Center = styled.div`
   text-align: center;
 `;
 
-// ***Placed inside the CENTER component *** Exporting this as I am using this within the footer as well.
-export const Logo = styled.h1`
-  font-weight: bold;
-  font-size: 35px;
-`;
 // *** Placed inside WRAPPER component ***  Wrapping the elements on the right under this div element container and specifying its styling
 const Right = styled.div`
   flex: 1;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @media only screen and (max-width: 480px) {
+    justify-content: flex-end;
+  }
 `;
 
 const NavbarOptions = styled.div`
@@ -74,20 +80,21 @@ const NavbarOptions = styled.div`
 `;
 // This is the main functional component which is returned in the end
 const Navbar = () => {
+  const screenSize = window.screen.width <= 480 ? true : false;
   return (
     //The top most element
     <Container>
       <Wrapper>
         {/*The left component has the search field within it*/}
         <Left>
-            <Icon>
-          <MenuIcon sx={{ color: "#191970", cursor: "pointer" }} />
+          <Icon>
+            <MenuIcon sx={{ color: "#191970", cursor: "pointer" }} />
           </Icon>
           {/* The search container has the input field and the search icon imported from mui */}
-          <SearchContainer>
+          {!screenSize &&<SearchContainer>
             <InputField />
             <SearchIcon sx={{ color: "gray", cursor: "pointer" }} />
-          </SearchContainer>
+          </SearchContainer>}
         </Left>
 
         {/*The center component has the Company Name within it*/}
@@ -97,13 +104,16 @@ const Navbar = () => {
 
         {/*The right component has different options within it*/}
         <Right>
-          <NavbarOptions>Become a Seller</NavbarOptions>
-          <NavbarOptions>Sign Up</NavbarOptions>
-          <NavbarOptions>Login</NavbarOptions>
+          {!screenSize &&<NavbarOptions>Become a Seller</NavbarOptions>}
+          {!screenSize && <NavbarOptions>Sign Up</NavbarOptions>}
+          {!screenSize && <NavbarOptions>Login</NavbarOptions>}
           <Icon>
-          <Badge badgeContent={2} sx={{ color: "#191970", cursor: "pointer" }}>
-            <ShoppingCartIcon />
-          </Badge>
+            <Badge
+              badgeContent={2}
+              sx={{ color: "#191970", cursor: "pointer" }}
+            >
+              <ShoppingCartIcon />
+            </Badge>
           </Icon>
         </Right>
       </Wrapper>

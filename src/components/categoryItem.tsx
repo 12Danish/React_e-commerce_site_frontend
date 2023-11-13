@@ -6,6 +6,11 @@ const Container = styled.div`
   width: 20%;
   margin: 20px;
   position: relative;
+  @media only screen and (max-width: 480px) {
+  height : 50%;
+  width : 100%;
+    
+}
 `;
 // This wraps around the image to give its properties
 const ImageWrapper = styled.div`

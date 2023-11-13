@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { Header } from "./Categories";
+import { Header } from "./shared_styled_elements";
 import Product from "./Product";
-import { productsInfo } from "../data";
+import { productsInfo } from "../assets/data";
 import Pagination from "@mui/material/Pagination";
 // This is the top most level container
 const Container = styled.div`
@@ -15,6 +15,9 @@ const AllProductsContainer = styled.div`
   padding: 20px;
   align-items: center;
   justify-content: space-between;
+  @media only screen and (max-width: 480px) {
+    flex-direction: column;
+  }
 `;
 // Wraps around the pagination
 const PaginationWrapper = styled.div`
@@ -36,7 +39,12 @@ const ProductList = () => {
       </AllProductsContainer>
       {/* This componet wraps around pagination row */}
       <PaginationWrapper>
-        <Pagination count={10} variant="outlined" color="primary" size="large"/>
+        <Pagination
+          count={10}
+          variant="outlined"
+          color="primary"
+          size="large"
+        />
       </PaginationWrapper>
     </Container>
   );

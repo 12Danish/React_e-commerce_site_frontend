@@ -1,21 +1,14 @@
 import styled from "styled-components";
 import CategoryItem from "./CategoryItem";
-import { categoriesInfo } from "../data";
+import { categoriesInfo } from "../assets/data";
+import { Header } from "./shared_styled_elements";
 // The top most level wrapper
 const Container = styled.div`
   height: 100vh;
   width: 100%;
-`;
-// Defining the properties of the header 'Categories'. I have exported this here as I am using the same component within ProductList
-export const Header = styled.div`
-  margin-top: 10px;
-  height: 80px;
-  width: 100%;
-  background-color: #191970;
-  color: #f8f8ff;
-  font-size: 50px;
-  font-weight: bold;
-  text-align: center;
+  @media only screen and (max-width: 480px) {
+    height: auto;
+  }
 `;
 
 // This will contain all the categories

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 // Importing this as the code is thr same
-import { Logo } from "./Navbar";
+import { Logo } from "./shared_styled_elements";
 //Importing facebook Icon
 import FacebookIcon from "@mui/icons-material/Facebook";
 //Importing Instgram icon
@@ -15,8 +15,11 @@ import MailIcon from "@mui/icons-material/Mail";
 // This is the top-most container
 const Container = styled.div`
   display: flex;
-  width: 100%;
-  height: 65vh;
+  width: auto;
+  height: auto;
+  @media only screen and (max-width: 480px) {
+    flex-direction: column;
+  }
 `;
 // This wraps around all the elements in the left
 const Left = styled.div`
@@ -24,7 +27,7 @@ const Left = styled.div`
   display: flex;
   flex-direction: column;
   padding: 25px;
-`;
+  `;
 const Description = styled.div`
   font-size: 23px;
   margin: 25px 0px;

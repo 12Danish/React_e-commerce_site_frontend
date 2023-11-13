@@ -5,7 +5,7 @@ import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 // Importing right arrow image from mui
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 // Importing data in JSON format
-import { sliderInfo } from "../data";
+import { sliderInfo } from "../assets/data";
 
 // This container is the top most level element
 const Container = styled.div`
@@ -68,6 +68,9 @@ const Slide = styled.div<SlideProps>`
 const ImageWrapper = styled.div`
   flex: 1;
   height: 100%;
+  @media only screen and (max-width: 480px) {
+    display: none;
+  }
 `;
 // *** Present within IMAGEWRAPPER *** It controls the properties of the image
 const Image = styled.img`
@@ -83,7 +86,7 @@ interface TitleProps {
 }
 // *** Present within INFOWRAPPER *** It controls the properties of the Title
 const Title = styled.h1<TitleProps>`
-  font-weight: 1000;
+  font-weight: bold;
   font-size: 70px;
   color: ${(props) => props.color};
   letter-spacing: 2px;
