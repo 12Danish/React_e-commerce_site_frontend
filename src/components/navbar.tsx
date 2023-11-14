@@ -13,7 +13,7 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 //Importing the wrapper for icons
 import { Icon } from "./shared_styled_elements";
 // importing this from the shared_styled_elements file
-import { Logo } from "./shared_styled_elements";
+import { BoldHeading } from "./shared_styled_elements";
 // importing this function which will help in determining whether screen size
 // This is the top most level container for the navbar
 const Container = styled.div`
@@ -39,7 +39,6 @@ const Left = styled.div`
   align-items: center;
   flex: 1;
   justify-content: flex-start;
-
 `;
 
 // ***Placed Inside LEFT component *** Specifying style properties for the search box
@@ -91,20 +90,22 @@ const Navbar = () => {
             <MenuIcon sx={{ color: "#191970", cursor: "pointer" }} />
           </Icon>
           {/* The search container has the input field and the search icon imported from mui */}
-          {!screenSize &&<SearchContainer>
-            <InputField />
-            <SearchIcon sx={{ color: "gray", cursor: "pointer" }} />
-          </SearchContainer>}
+          {!screenSize && (
+            <SearchContainer>
+              <InputField />
+              <SearchIcon sx={{ color: "gray", cursor: "pointer" }} />
+            </SearchContainer>
+          )}
         </Left>
 
         {/*The center component has the Company Name within it*/}
         <Center>
-          <Logo>Company Name </Logo>
+          <BoldHeading>Company Name </BoldHeading>
         </Center>
 
         {/*The right component has different options within it*/}
         <Right>
-          {!screenSize &&<NavbarOptions>Become a Seller</NavbarOptions>}
+          {!screenSize && <NavbarOptions>Become a Seller</NavbarOptions>}
           {!screenSize && <NavbarOptions>Sign Up</NavbarOptions>}
           {!screenSize && <NavbarOptions>Login</NavbarOptions>}
           <Icon>

@@ -170,3 +170,12 @@ export const productsInfo = [
     price: "5,000 RS",
   },
 ];
+
+export const productDetail = [
+  {
+    id: 16,
+    img: "src/assets/images/sample_product.jpg",
+    title: "Hammer",
+    price: "5,000 RS",
+  },
+];

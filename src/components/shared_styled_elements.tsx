@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
-// Exporting this as I am using this within the footer and navbar 
-export const Logo = styled.h1`
+// Exporting this as I am using this within the footer and navbar
+export const BoldHeading = styled.h1`
   font-weight: bold;
   font-size: 35px;
   @media only screen and (max-width: 480px) {
@@ -9,7 +9,7 @@ export const Logo = styled.h1`
   }
 `;
 
-// Defining the properties of the header 'Categories'. I have exported this here as I am using the same component within ProductList anf Categories and NewsLetter
+// Defining the properties of the header. I have exported this here as I am using the same component within ProductList anf Categories and NewsLetter
 export const Header = styled.div`
   margin-top: 10px;
   height: 80px;

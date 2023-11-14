@@ -1,6 +1,6 @@
 import styled from "styled-components";
 // Importing this as the code is thr same
-import { Logo } from "./shared_styled_elements";
+import { BoldHeading } from "./shared_styled_elements";
 //Importing facebook Icon
 import FacebookIcon from "@mui/icons-material/Facebook";
 //Importing Instgram icon
@@ -27,7 +27,7 @@ const Left = styled.div`
   display: flex;
   flex-direction: column;
   padding: 25px;
-  `;
+`;
 const Description = styled.div`
   font-size: 23px;
   margin: 25px 0px;
@@ -99,7 +99,7 @@ const Footer = () => {
     <Container>
       {/* All the elements on the left */}
       <Left>
-        <Logo>Company Name.</Logo>
+        <BoldHeading>Company Name.</BoldHeading>
 
         <Description>
           This venture was founded by a couple of college undergrads in their
