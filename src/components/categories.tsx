@@ -19,7 +19,7 @@ const AllCategoriesWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 10px;
+  padding: 20px;
   align-items: center;
 `;
 
