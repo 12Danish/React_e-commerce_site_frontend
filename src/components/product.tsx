@@ -19,11 +19,9 @@ const Container = styled.div`
     transform: scale(1.1);
   }
   @media only screen and (max-width: 480px) {
-  height : 50%;
-  width : 100%;
-
-    
-}
+    height: 50%;
+    width: 100%;
+  }
 `;
 //This is the circle behind the image, purely for design purposes
 const Circle = styled.div`
@@ -52,7 +50,7 @@ const InfoWrapper = styled.div`
 `;
 // Defining the title
 const Info = styled.h1`
-font-weight: bold;
+  font-weight: bold;
 `;
 
 // This wraps around the icon
@@ -70,8 +68,7 @@ const IconWrapper = styled.div`
   margin: 10px;
 `;
 
-
-// Defining the props for the product component
+// These are the arguments this component accepts in order to dynamically render the data given to it
 interface ProductProps {
   product: {
     id: number;

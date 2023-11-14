@@ -177,5 +177,6 @@ export const productDetail = [
     img: "src/assets/images/sample_product.jpg",
     title: "Hammer",
     price: "5,000 RS",
+    desc:" This is one of the best hammers out there"
   },
 ];
