@@ -3,6 +3,7 @@ import styled from "styled-components";
 const Container = styled.div`
   height: 10vh;
   width: 100%;
+  margin-top: 10px;
   display: flex;
   align-items: right;
   justify-content: space-between;
@@ -60,7 +61,7 @@ const FilterContainer = () => {
       <Filter2>
         <FilterText>Sort Products</FilterText>
         <Select>
-          <Option>Price Hight to Low </Option>
+          <Option>Price High to Low </Option>
           <Option>Price Low to High </Option>
           <Option>Date Published</Option>
         </Select>

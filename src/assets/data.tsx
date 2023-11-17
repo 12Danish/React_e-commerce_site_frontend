@@ -177,6 +177,31 @@ export const productDetail = [
     img: "src/assets/images/sample_product.jpg",
     title: "Hammer",
     price: "5,000 RS",
-    desc:" This is one of the best hammers out there"
+    desc: `This is one of the best hammers out there with a wooden handle and pure steel head.
+          This is being marketed by one of the finest brands with little to no complaints.`,
+  },
+];
+
+export const reviewsData = [
+  {
+    id: 1,
+    name: "Raza Ahmed",
+    stars: 5,
+    review:
+      "Highly Recommend buying from them. Fast delivery. They deliver what they show",
+  },
+  {
+    id: 2,
+    name: "Momina Haider",
+    stars: 4,
+    review:
+      "Best in the business",
+  },
+  {
+    id: 3,
+    name: "Talha Sattar",
+    stars: 5,
+    review:
+      "Excellent Quality and service. will surely shop again.",
   },
 ];

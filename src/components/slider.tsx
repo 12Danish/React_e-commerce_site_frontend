@@ -6,7 +6,8 @@ import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 // Importing data in JSON format
 import { sliderInfo } from "../assets/data";
-
+//Importing button from shared styled styled elements
+import { Button } from "./shared_styled_elements";
 // This container is the top most level element
 const Container = styled.div`
   height: 90vh;
@@ -97,19 +98,7 @@ const Desc = styled.p`
   font-weight: 500;
   font-size: 30px;
 `;
-// *** Present within INFOWRAPPER *** It controls the properties of the Butoon
-const Button = styled.button`
-  padding: 10px;
-  border: solid;
-  border-color: white;
-  background-color: #191970;
-  color: white;
-  font-weight: bold;
-  letter-spacing: 2px;
-  &:hover {
-    transform: scale(1.1);
-  }
-`;
+
 
 // This is the main component which is returned
 const Slider = () => {
@@ -161,7 +150,7 @@ const Slider = () => {
             <InfoWrapper>
               <Title color={item.h1Color}>{item.title}</Title>
               <Desc>{item.desc}</Desc>
-              <Button>{item.button_name}</Button>
+              <Button bgcolor="#191970" fontcolor="white" bordercolor="white">{item.button_name}</Button>
             </InfoWrapper>
           </Slide>
         ))}

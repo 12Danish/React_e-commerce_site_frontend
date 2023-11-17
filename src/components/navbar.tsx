@@ -100,7 +100,7 @@ const Navbar = () => {
 
         {/*The center component has the Company Name within it*/}
         <Center>
-          <BoldHeading>Company Name </BoldHeading>
+          <BoldHeading fontColor="black">Company Name </BoldHeading>
         </Center>
 
         {/*The right component has different options within it*/}
