@@ -99,7 +99,7 @@ const Footer = () => {
     <Container>
       {/* All the elements on the left */}
       <Left>
-        <BoldHeading fontColor="black">Company Name.</BoldHeading>
+        <BoldHeading fontcolor="black">Company Name.</BoldHeading>
 
         <Description>
           This venture was founded by a couple of college undergrads in their

@@ -12,6 +12,9 @@ const Container = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
+  @media only screen and (max-width: 480px) {
+    height: 250vh;
+  }
 `;
 // This wrapper wraps around the Image and all the descriptions for the product
 const ImageAndInfoWrapper = styled.div`
@@ -20,6 +23,10 @@ const ImageAndInfoWrapper = styled.div`
   padding: 50px;
   display: flex;
   justify-content: space-between;
+
+  @media only screen and (max-width: 480px) {
+    flex-direction: column;
+  }
 `;
 // This wraps around the image
 const ImageWrapper = styled.div`
@@ -32,6 +39,9 @@ const Image = styled.img`
   width: 80%;
   height: 80%;
   object-fit: cover;
+  @media only screen and (max-width: 480px) {
+    width: 95%;
+  }
 `;
 // This wraps around all of the information
 const InfoWrapper = styled.div`
@@ -42,26 +52,31 @@ const InfoWrapper = styled.div`
   border: solid;
   border-width: 1px;
   border-color: #191970;
+
+  @media only screen and (max-width: 480px) {
+    padding: 20px 7px;
+  }
 `;
 // This describes the title
 const Title = styled.h1`
+  flex: 1;
   font-size: 70px;
 `;
 
 //This eleemnt styled the price
 const Price = styled.span`
+  flex: 1;
   font-size: 40px;
   color: red;
 `;
 // This wraps around the whole counter
 const CounterWrapper = styled.div`
-  height: 20px;
+  flex: 1;
   width: 60px;
   margin-bottom: 10px;
 `;
 // This is the input field
 const NumberInput = styled.input`
-  height: 100%;
   width: 100%;
   border: solid;
   border-width: 1px;
@@ -71,10 +86,16 @@ const NumberInput = styled.input`
 `;
 // This is the wrapper for the buttons
 const ButtonWrapper = styled.div`
+  flex: 1;
   display: flex;
   width: 50%;
   margin-top: 60px;
   justify-content: space-between;
+
+  @media only screen and (max-width: 480px) {
+    width: 100%;
+    margin-top: 20px;
+  }
 `;
 // This wraps around both of the reviews section
 const AllReviewsWrapper = styled.div`
@@ -83,6 +104,10 @@ const AllReviewsWrapper = styled.div`
   padding: 10px;
   justify-content: space-between;
   background-color: #f8f8ff;
+  @media only screen and (max-width: 480px) {
+    flex-direction: column-reverse;
+    flex: 1.5;
+  }
 `;
 // This is the wrapper for all the reviews
 const ExistingReviewsWrapper = styled.div`
@@ -93,6 +118,10 @@ const ExistingReviewsWrapper = styled.div`
   flex-direction: column;
   overflow-y: scroll;
   overflow-x: hidden;
+
+  @media only screen and (max-width) {
+    flex: 1.8;
+  }
 `;
 
 //This is the wrapper for adding a new review
@@ -101,7 +130,7 @@ const NewReviewWrapper = styled.div`
   padding: 7px;
   display: flex;
   flex-direction: column;
-  overflow: hidden ;
+  overflow: hidden;
 `;
 
 // These are the arguments this component accepts in order to dynamically render the data given to it
@@ -158,7 +187,7 @@ const SingleProductDetails = ({ product }: SingleProductDetailsProps) => {
       if the conditions are true then the element is displayed */}
         {reviewsData && reviewsData.length > 0 && (
           <ExistingReviewsWrapper>
-            <BoldHeading fontColor="#191970">Reviews By Customers</BoldHeading>
+            <BoldHeading fontcolor="#191970">Reviews By Customers</BoldHeading>
             {/* Mapping each data entry to a review component defined seprately*/}
             {reviewsData.map((review) => (
               <ExistingReview data={review} key={review.id} />
@@ -168,8 +197,9 @@ const SingleProductDetails = ({ product }: SingleProductDetailsProps) => {
             </Button>
           </ExistingReviewsWrapper>
         )}
+        {/* Section for adding a new review */}
         <NewReviewWrapper>
-          <BoldHeading fontColor="#191970">
+          <BoldHeading fontcolor="#191970">
             Have You Tried This Product? Leave A Review.
           </BoldHeading>
           <AddReview />

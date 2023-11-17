@@ -1,13 +1,13 @@
 import styled from "styled-components";
 
 interface BoldHeadingProps {
-  fontColor: string;
+  fontcolor: string;
 }
 // Exporting this as I am using this within the footer and navbar
 export const BoldHeading = styled.h1<BoldHeadingProps>`
   font-weight: bold;
   font-size: 35px;
-  color: ${(props) => props.fontColor};
+  color: ${(props) => props.fontcolor};
   @media only screen and (max-width: 480px) {
     font-size: 25px;
   }
@@ -78,5 +78,3 @@ export const Name = styled.h1`
   font-weight: 700;
   margin-bottom: 5px;
 `;
-// This wraps around all the starsThis is being used in ExistingReviws and AddReviews
-export const StarsWrapper = styled.span``;

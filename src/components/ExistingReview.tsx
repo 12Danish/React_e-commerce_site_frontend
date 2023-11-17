@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { Desc } from "./shared_styled_elements";
 import { Name } from "./shared_styled_elements";
-import { StarsWrapper } from "./shared_styled_elements";
 import StarIcon from "@mui/icons-material/Star";
 // This is the top most contaiener
 const Container = styled.div`
@@ -12,10 +11,16 @@ const Container = styled.div`
   padding: 5px;
   border-width: 1px;
   border-radius: 2%;
+
+  @media only screen and (max-width: 480px){
+    height:auto;
+  }
 `;
 
 // This wraps arround the comment posted by the other users
-const CommentBox = styled.div``;
+const CommentBox = styled.div`
+`;
+const StarsWrapper = styled.span``;
 // This accepts props for the component
 interface ExitingReviewProps {
   data: {
@@ -28,14 +33,14 @@ interface ExitingReviewProps {
 // This is the main  component which is retuened
 const ExistingReview = ({ data }: ExitingReviewProps) => {
   // This function handles displaying the stars
-  function handleDisplayStars(stars: number) {
+  const handleDisplayStars = (stars: number) => {
     // Creating an array of undefined elements upto the length specified
     const starsArray = Array.from({ length: stars });
     // mapping each of those elements to a strar and returning them
     return starsArray.map((_, index) => (
       <StarIcon key={index} sx={{ color: "#e0c00b" }} />
     ));
-  }
+  };
   return (
     <Container>
       {/*This is the tag for the name of the person with all the needed styling */}
