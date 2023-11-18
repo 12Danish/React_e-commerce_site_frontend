@@ -74,7 +74,7 @@ interface ProductProps {
     id: number;
     img: string;
     title: string;
-    price: string;
+    price: number;
   };
 }
 
@@ -90,7 +90,7 @@ const Product = ({ product }: ProductProps) => {
         {/* Adding the title */}
         <Info>{product.title}</Info>
         {/* Adding the price */}
-        <Info>{product.price}</Info>
+        <Info>{product.price}RS</Info>
       </InfoWrapper>
       <IconWrapper>
         {/* Adding icon */}

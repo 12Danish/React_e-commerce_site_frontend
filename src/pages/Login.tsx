@@ -31,14 +31,14 @@ export const Form = styled.form`
   overflow: hidden;
 `;
 
-// Wraps around all the links 
+// Wraps around all the links
 const LinkWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   margin: 10px;
 `;
 
-// Styling for each link 
+// Styling for each link
 const Link = styled.a`
   text-decoration: underline;
   cursor: pointer;
@@ -47,7 +47,7 @@ const Link = styled.a`
 const Login = () => {
   return (
     <Container>
-      <FormWrapper>
+      <FormWrapper margin="0px">
         <Title>Sign In</Title>
         <Form>
           <Input placeholder="Username" />

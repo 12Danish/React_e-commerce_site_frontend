@@ -77,97 +77,97 @@ export const productsInfo = [
     id: 1,
     img: "src/assets/images/sample_product.jpg",
     title: "Hammer",
-    price: "5,000 RS",
+    price: 5000,
   },
   {
     id: 2,
     img: "src/assets/images/sample_product.jpg",
     title: "Hammer",
-    price: "5,000 RS",
+    price: 5000,
   },
   {
     id: 3,
     img: "src/assets/images/sample_product.jpg",
     title: "Hammer",
-    price: "5,000 RS",
+    price: 5000,
   },
   {
     id: 4,
     img: "src/assets/images/sample_product.jpg",
     title: "Hammer",
-    price: "5,000 RS",
+    price: 5000,
   },
   {
     id: 5,
     img: "src/assets/images/sample_product.jpg",
     title: "Hammer",
-    price: "5,000 RS",
+    price: 5000,
   },
   {
     id: 6,
     img: "src/assets/images/sample_product.jpg",
     title: "Hammer",
-    price: "5,000 RS",
+    price: 5000,
   },
   {
     id: 7,
     img: "src/assets/images/sample_product.jpg",
     title: "Hammer",
-    price: "5,000 RS",
+    price: 5000,
   },
   {
     id: 8,
     img: "src/assets/images/sample_product.jpg",
     title: "Hammer",
-    price: "5,000 RS",
+    price: 5000,
   },
   {
     id: 9,
     img: "src/assets/images/sample_product.jpg",
     title: "Hammer",
-    price: "5,000 RS",
+    price: 5000,
   },
   {
     id: 10,
     img: "src/assets/images/sample_product.jpg",
     title: "Hammer",
-    price: "5,000 RS",
+    price: 5000,
   },
   {
     id: 11,
     img: "src/assets/images/sample_product.jpg",
     title: "Hammer",
-    price: "5,000 RS",
+    price: 5000,
   },
   {
     id: 12,
     img: "src/assets/images/sample_product.jpg",
     title: "Hammer",
-    price: "5,000 RS",
+    price: 5000,
   },
   {
     id: 13,
     img: "src/assets/images/sample_product.jpg",
     title: "Hammer",
-    price: "5,000 RS",
+    price: 5000,
   },
   {
     id: 14,
     img: "src/assets/images/sample_product.jpg",
     title: "Hammer",
-    price: "5,000 RS",
+    price: 5000,
   },
   {
     id: 15,
     img: "src/assets/images/sample_product.jpg",
     title: "Hammer",
-    price: "5,000 RS",
+    price: 5000,
   },
   {
     id: 16,
     img: "src/assets/images/sample_product.jpg",
     title: "Hammer",
-    price: "5,000 RS",
+    price: 5000,
   },
 ];
 
@@ -176,7 +176,7 @@ export const productDetail = [
     id: 16,
     img: "src/assets/images/sample_product.jpg",
     title: "Hammer",
-    price: "5,000 RS",
+    price: 5000,
     desc: `This is one of the best hammers out there with a wooden handle and pure steel head.
           This is being marketed by one of the finest brands with little to no complaints.`,
   },
@@ -194,14 +194,41 @@ export const reviewsData = [
     id: 2,
     name: "Momina Haider",
     stars: 4,
-    review:
-      "Best in the business",
+    review: "Best in the business",
   },
   {
     id: 3,
     name: "Talha Sattar",
     stars: 5,
-    review:
-      "Excellent Quality and service. will surely shop again.",
+    review: "Excellent Quality and service. will surely shop again.",
   },
+];
+
+export const cartItems = [
+  {
+    id: 1,
+    img: "src/assets/images/sample_product.jpg",
+    title: "Hammer",
+    price: 5000,
+    quantity: 2,
+    totalprice : 10000,
+  },
+  {
+    id: 2,
+    img: "src/assets/images/sample_product.jpg",
+    title: "Hammer",
+    price: 5000,
+    quantity: 1,
+    totalprice : 5000,
+  },
+  {
+    id: 3,
+    img: "src/assets/images/sample_product.jpg",
+    title: "Hammer",
+    price: 5000,
+    quantity: 3,
+    totalprice : 15000,
+  },
+  
+  
 ];

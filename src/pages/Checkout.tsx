@@ -1,17 +1,16 @@
 import Announcements from "../components/Announcements";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import CartBody from "../components/CartBody";
-
-const Cart = () => {
+import CheckoutForm from "../components/CheckoutForm";
+const Checkout = () => {
   return (
     <div>
       <Announcements />
       <Navbar />
-      <CartBody />
+      <CheckoutForm />
       <Footer />
     </div>
   );
 };
 
-export default Cart;
+export default Checkout;

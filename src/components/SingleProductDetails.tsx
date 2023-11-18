@@ -121,6 +121,14 @@ const ExistingReviewsWrapper = styled.div`
     flex: 1.8;
   }
 `;
+// This wraps around the message of no reviews when there are no reviews
+const NoReviewWrapper = styled.div`
+  margin-top: 30%;
+  @media only screen and (max-width: 480px) {
+    margin-top: 100%;
+    margin-left: 20px;
+  }
+`;
 
 //This is the wrapper for adding a new review
 const NewReviewWrapper = styled.div`
@@ -137,7 +145,7 @@ interface SingleProductDetailsProps {
     id: number;
     img: string;
     title: string;
-    price: string;
+    price: number;
     desc: string;
   };
 }
@@ -152,7 +160,7 @@ const SingleProductDetails = ({ product }: SingleProductDetailsProps) => {
         {/*This wraps around all of the information */}
         <InfoWrapper>
           <Title>{product.title}</Title>
-          <Price>{product.price}</Price>
+          <Price>{product.price}RS</Price>
           <Desc>{product.desc}</Desc>
           {/* This wraps around the counter */}
           <CounterWrapper>
@@ -170,10 +178,20 @@ const SingleProductDetails = ({ product }: SingleProductDetailsProps) => {
           </CounterWrapper>
           {/*This wrapper contains both of the two buttons */}
           <ButtonWrapper>
-            <Button width="auto" bgcolor="#191970" fontcolor="white" bordercolor="white">
+            <Button
+              width="auto"
+              bgcolor="#191970"
+              fontcolor="white"
+              bordercolor="white"
+            >
               ADD TO CART
             </Button>
-            <Button  width="auto" bgcolor="#e2eef3" fontcolor="#191970" bordercolor="#191970">
+            <Button
+              width="auto"
+              bgcolor="#e2eef3"
+              fontcolor="#191970"
+              bordercolor="#191970"
+            >
               BUY NOW
             </Button>
           </ButtonWrapper>
@@ -190,9 +208,24 @@ const SingleProductDetails = ({ product }: SingleProductDetailsProps) => {
             {reviewsData.map((review) => (
               <ExistingReview data={review} key={review.id} />
             ))}
-            <Button width="auto" bgcolor="#191970" fontcolor="white" bordercolor="white">
+            <Button
+              width="auto"
+              bgcolor="#191970"
+              fontcolor="white"
+              bordercolor="white"
+            >
               Load More
             </Button>
+          </ExistingReviewsWrapper>
+        )}
+        {/* If there are no reviews then this is displayed*/}
+        {reviewsData.length == 0 && (
+          <ExistingReviewsWrapper>
+            <NoReviewWrapper>
+              <BoldHeading fontcolor="#191970">
+                There are no reviews for this product.
+              </BoldHeading>
+            </NoReviewWrapper>
           </ExistingReviewsWrapper>
         )}
         {/* Section for adding a new review */}
@@ -201,7 +234,12 @@ const SingleProductDetails = ({ product }: SingleProductDetailsProps) => {
             Have You Tried This Product? Leave A Review.
           </BoldHeading>
           <AddReview />
-          <Button width="auto" bgcolor="#191970" fontcolor="white" bordercolor="white">
+          <Button
+            width="auto"
+            bgcolor="#191970"
+            fontcolor="white"
+            bordercolor="white"
+          >
             Post Review
           </Button>
         </NewReviewWrapper>

@@ -46,12 +46,12 @@ interface ButtonProps {
   bgcolor: string;
   fontcolor: string;
   bordercolor: string;
-  width : string;
+  width: string;
 }
 //  It controls the properties of the Button
 export const Button = styled.button<ButtonProps>`
   height: 40px;
-  width: ${(props)=> props.width};
+  width: ${(props) => props.width};
   padding: 10px;
   border: solid;
   border-width: 1px;
@@ -81,9 +81,13 @@ export const Name = styled.h1`
   margin-bottom: 5px;
 `;
 
-// All the following elements are now being used within the login and sign up pages 
+// All the following elements are now being used within the login and sign up pages
 // Wraps around the whole register box
-export const FormWrapper = styled.div`
+interface FormWrapperProps {
+  margin: string;
+}
+export const FormWrapper = styled.div<FormWrapperProps>`
+  margin: ${(props) => props.margin};
   padding: 20px;
   width: 40%;
   display: flex;
@@ -96,7 +100,7 @@ export const FormWrapper = styled.div`
     width: 100%;
   }
 `;
-// Styling for the title
+// Styling for the title. This is used in different components
 export const Title = styled.h1`
   font-weight: 500;
   font-size: 40px;
