@@ -1,6 +1,5 @@
 import styled from "styled-components";
-import { Desc } from "./shared_styled_elements";
-import { Name } from "./shared_styled_elements";
+import { Desc,Name } from "./shared_styled_elements";
 import StarIcon from "@mui/icons-material/Star";
 // This is the top most contaiener
 const Container = styled.div`

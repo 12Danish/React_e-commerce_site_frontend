@@ -1,10 +1,8 @@
 import styled from "styled-components";
-import { Button } from "./shared_styled_elements";
-import { Desc } from "./shared_styled_elements";
+import { Button, BoldHeading, Desc } from "./shared_styled_elements";
 import { reviewsData } from "../assets/data";
 import ExistingReview from "./ExistingReview";
 import AddReview from "./AddReview";
-import { BoldHeading } from "./shared_styled_elements";
 // This wraps around all the product details
 const Container = styled.div`
   display: flex;
@@ -119,7 +117,7 @@ const ExistingReviewsWrapper = styled.div`
   overflow-y: scroll;
   overflow-x: hidden;
 
-  @media only screen and (max-width) {
+  @media only screen and (max-width: 480px) {
     flex: 1.8;
   }
 `;
@@ -172,10 +170,10 @@ const SingleProductDetails = ({ product }: SingleProductDetailsProps) => {
           </CounterWrapper>
           {/*This wrapper contains both of the two buttons */}
           <ButtonWrapper>
-            <Button bgcolor="#191970" fontcolor="white" bordercolor="white">
+            <Button width="auto" bgcolor="#191970" fontcolor="white" bordercolor="white">
               ADD TO CART
             </Button>
-            <Button bgcolor="#e2eef3" fontcolor="#191970" bordercolor="#191970">
+            <Button  width="auto" bgcolor="#e2eef3" fontcolor="#191970" bordercolor="#191970">
               BUY NOW
             </Button>
           </ButtonWrapper>
@@ -192,7 +190,7 @@ const SingleProductDetails = ({ product }: SingleProductDetailsProps) => {
             {reviewsData.map((review) => (
               <ExistingReview data={review} key={review.id} />
             ))}
-            <Button bgcolor="#191970" fontcolor="white" bordercolor="white">
+            <Button width="auto" bgcolor="#191970" fontcolor="white" bordercolor="white">
               Load More
             </Button>
           </ExistingReviewsWrapper>
@@ -203,7 +201,7 @@ const SingleProductDetails = ({ product }: SingleProductDetailsProps) => {
             Have You Tried This Product? Leave A Review.
           </BoldHeading>
           <AddReview />
-          <Button bgcolor="#191970" fontcolor="white" bordercolor="white">
+          <Button width="auto" bgcolor="#191970" fontcolor="white" bordercolor="white">
             Post Review
           </Button>
         </NewReviewWrapper>

@@ -150,7 +150,7 @@ const Slider = () => {
             <InfoWrapper>
               <Title color={item.h1Color}>{item.title}</Title>
               <Desc>{item.desc}</Desc>
-              <Button bgcolor="#191970" fontcolor="white" bordercolor="white">{item.button_name}</Button>
+              <Button bgcolor="#191970" fontcolor="white" bordercolor="white" width= "auto">{item.button_name}</Button>
             </InfoWrapper>
           </Slide>
         ))}

@@ -11,9 +11,7 @@ import Badge from "@mui/material/Badge";
 //Importing shopping cart Icon
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 //Importing the wrapper for icons
-import { Icon } from "./shared_styled_elements";
-// importing this from the shared_styled_elements file
-import { BoldHeading } from "./shared_styled_elements";
+import { Icon, BoldHeading } from "./shared_styled_elements";
 // importing this function which will help in determining whether screen size
 // This is the top most level container for the navbar
 const Container = styled.div`

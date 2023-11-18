@@ -46,11 +46,12 @@ interface ButtonProps {
   bgcolor: string;
   fontcolor: string;
   bordercolor: string;
+  width : string;
 }
 //  It controls the properties of the Button
 export const Button = styled.button<ButtonProps>`
   height: 40px;
-  width: auto;
+  width: ${(props)=> props.width};
   padding: 10px;
   border: solid;
   border-width: 1px;
@@ -59,6 +60,7 @@ export const Button = styled.button<ButtonProps>`
   color: ${(props) => props.fontcolor};
   font-weight: 800;
   letter-spacing: 2px;
+  transition: all 0.5s ease;
   &:hover {
     transform: scale(1.1);
   }
@@ -77,4 +79,34 @@ export const Name = styled.h1`
 
   font-weight: 700;
   margin-bottom: 5px;
+`;
+
+// All the following elements are now being used within the login and sign up pages 
+// Wraps around the whole register box
+export const FormWrapper = styled.div`
+  padding: 20px;
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: whitesmoke;
+  border-width: 1px;
+  border-color: #191970;
+  @media only screen and (max-width: 480px) {
+    width: 100%;
+  }
+`;
+// Styling for the title
+export const Title = styled.h1`
+  font-weight: 500;
+  font-size: 40px;
+`;
+
+// Styling for each form field
+export const Input = styled.input`
+  flex: 1;
+  min-width: 40%;
+  padding: 20px;
+  margin: 20px 20px 0px 0px;
+  font-weight: 700;
 `;
