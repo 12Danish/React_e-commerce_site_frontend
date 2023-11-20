@@ -6,5 +6,5 @@ import Login from "./pages/Login";
 import Cart from "./pages/Cart";
 import Checkout from "./pages/Checkout";
 export default function App() {
-  return <HomePage />;
+  return <ProductDetailsPage />;
 }
