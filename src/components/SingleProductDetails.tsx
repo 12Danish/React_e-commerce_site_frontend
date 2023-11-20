@@ -115,6 +115,7 @@ const ExistingReviewsWrapper = styled.div`
   justify-content: space-between;
   flex-direction: column;
   overflow-y: scroll;
+  max-height: 100vh;
   overflow-x: hidden;
 
   @media only screen and (max-width: 480px) {
