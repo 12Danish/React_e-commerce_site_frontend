@@ -174,11 +174,10 @@ export const productsInfo = [
 export const productDetail = [
   {
     id: 16,
-    img: "src/assets/images/sample_product.jpg",
-    title: "Hammer",
-    price: 5000,
-    desc: `This is one of the best hammers out there with a wooden handle and pure steel head.
-          This is being marketed by one of the finest brands with little to no complaints.`,
+    img: "src/assets/images/paint.jpg",
+    title: "Dulex Paint / Gallon",
+    price: 1700,
+    desc: `The best in the market`,
   },
 ];
 
@@ -186,7 +185,7 @@ export const reviewsData = [
   {
     id: 1,
     name: "Raza Ahmed",
-    stars: 5,
+    stars: 2,
     review:
       "Highly Recommend buying from them. Fast delivery. They deliver what they show",
   },
